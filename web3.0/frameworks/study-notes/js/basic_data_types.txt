@@ -1,0 +1,5 @@
+At first the basic data types of all languages are almost the same 
+but in ways which we define how to consider them is different specially in js we use var let and const to define any variable we use 
+
+as the name suggets const is immutable and let is mutable and var was a old method so we use let and const 
+

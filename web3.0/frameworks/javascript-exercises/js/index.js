@@ -1,0 +1,7 @@
+ const bud = document.querySelectorAll("p")
+ alert(bud[0].innerText)
+ console.log(bud[0].innerText)
+ alert(bud[1].innerText)
+ console.log(bud[1].innerText)
+ alert(bud[2].innerText)
+ console.log(bud[2].innerText)
