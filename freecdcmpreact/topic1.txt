@@ -1,0 +1,5 @@
+in this topic we leearnt about basic rendering of element how we did it using the createRoot compoent of 
+react i dont why reactDom was not working but again createrot worked well made to print a few lines on the page 
+
+then in addition to that tried breaking  few things 
+and that was all ReactDOM and jsx use case

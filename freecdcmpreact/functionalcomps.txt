@@ -1,0 +1,1 @@
+functional components are not something very complex just a further function or componet that can be reused somewhere else if we wnat 

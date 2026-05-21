@@ -1,0 +1,34 @@
+TOPICS WE ARE LEARNING
+======================
+- Components
+- JSX
+- Etc.
+
+
+PREREQUISITES
+=============
+- HTML
+- CSS
+- JavaScript
+- ES6
+
+
+PROJECTS
+========
+
+First Project: To-Do Application
+
+Second Project: Meme Generator
+
+
+WHY REACT?
+==========
+
+1. Pretty fast compared to native JavaScript and HTML-based websites
+2. Uses virtual DOM for optimization
+3. We can make reusable components in React 
+4. Maintained by facebook
+5. Very Hirable
+
+
+
