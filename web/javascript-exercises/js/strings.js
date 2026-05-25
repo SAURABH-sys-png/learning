@@ -1,24 +1,24 @@
-// how the native or industry standard strings are used
-let str1 = "hello world"
+/**
+ * STRINGS — revision
+ * HTML: ../html/basics.html
+ *
+ * Ways to build / work with strings:
+ *  1. + concatenation
+ *  2. Template literals (backticks) + ${interpolation}
+ *  3. String object wrapper (rare in practice; primitives auto-box)
+ */
 
-// simple concatination
+// ─── Example 1: primitive string + concatenation ───
+let str1 = "hello world";
+let str2 = "hello";
+let combined = str1 + " " + str2;
+console.log("concat (+):", combined); // "hello world hello"
 
-let str2 = "hello"
+// ─── Example 2: template literal ───
+let withTemplate = `Hello — template literal: ${str1} ${str2}`;
+console.log("template literal:", withTemplate);
 
-let newd = str1 + " " + str2
-
-console.log(newd) // this will print "hello world hello"
-
-// we can also use template literals for concatination
-// string interpolation is a feature of template literals that allows us to embed expressions inside a string
-
-let newd2 = `Hello  there this i how we can use template literals for concatination ${str1} ${str2}`
-
-console.log(newd2) // this will print "Hello  there this i how we can use template literals for concatination hello world hello"
-
-// even a better way of doing this all is to use the built in method of strings called new
-
-const mystr = new String("hello world")
-
-console.log(mystr) // this will print "hello world" 
-
+// ─── Example 3: String wrapper object ───
+const mystr = new String("hello world");
+console.log("String object:", mystr);       // [String: "hello world"]
+console.log("valueOf():", mystr.valueOf()); // primitive "hello world"

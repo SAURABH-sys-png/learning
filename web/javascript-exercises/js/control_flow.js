@@ -1,7 +1,21 @@
-// === checks for the type of value or the data type and the value inside of it 
+/**
+ * CONTROL FLOW & COMPARISON — revision
+ * HTML: ../html/control-flow.html
+ *
+ * ==  — loose equality (coerces types)
+ * === — strict equality (type + value)
+ * Prefer === unless you explicitly need coercion.
+ */
 
-// == can be used to compare two different data types
+console.log("5 == '5':", 5 == "5");   // true
+console.log("5 === '5':", 5 === "5"); // false
 
-// should be using let and const instead of var bcs of global scope and local scope thing
+if (true) {
+  console.log("block runs when condition is truthy");
+}
 
-// same as cpp nothing new 
+// Example: prefer let/const over var for block scope
+const score = 85;
+if (score >= 60) {
+  console.log("passed");
+}

@@ -1,39 +1,31 @@
-// singleton object
-// object literal
+/**
+ * OBJECTS — revision
+ * HTML: ../html/basics.html
+ *
+ * Object literal { } — most common
+ * Symbol — unique property keys
+ * Object.freeze — no new/changed properties
+ */
 
 const jsUser = {
-    name: 'Saurabh',
-    age: 30,
-    emails: ["saurabh@example.com","harshi@example.com"],
-}
+  name: "Saurabh",
+  age: 30,
+  emails: ["saurabh@example.com", "harshi@example.com"],
+};
 
-console.log(jsUser.name);
-console.log(jsUser.age);
-console.log(jsUser.emails);
+console.log("literal access:", jsUser.name, jsUser.age, jsUser.emails);
 
-// use of syymbol
-
+// Example: Symbol as key (always unique)
 const mySym = Symbol("mySymbol");
-
 const myObj = {
-    [mySym]: "This is a symbol property",
-    regularProp: "This is a regular property"
+  [mySym]: "symbol value",
+  regularProp: "regular value",
 };
- 
+console.log("Symbol key:", myObj[mySym]);
+console.log("dot key:", myObj.regularProp);
 
-console.log(myObj[mySym]); // Accessing the symbol property
-console.log(myObj.regularProp); // Accessing the regular property
-
-// freezing an object
-
-const frozenObj = {
-    name: "Frozen Object",
-    value: 42
-};
-
+// Example: freeze
+const frozenObj = { name: "Frozen Object", value: 42 };
 Object.freeze(frozenObj);
-
-frozenObj.name = "Changed Name"; // This will not change the name property
-frozenObj.value = 100; // This will not change the value property
-
-console.log(frozenObj.name);
+frozenObj.name = "Changed Name"; // silently fails in sloppy mode; TypeError in strict
+console.log("frozen still:", frozenObj.name);

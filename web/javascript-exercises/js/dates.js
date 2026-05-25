@@ -1,4 +1,13 @@
+/**
+ * DATES — revision
+ * HTML: ../html/basics.html
+ *
+ * new Date() — current moment
+ * .toDateString() — weekday, month, day, year
+ * .toTimeString() — time + timezone
+ */
+
 const myDate = new Date();
-console.log(myDate); // current date and time
-console.log(myDate.toDateString()); // current date in string format
-console.log(myDate.toTimeString()); // current time in string format
+console.log("Date object:", myDate);
+console.log("toDateString():", myDate.toDateString());
+console.log("toTimeString():", myDate.toTimeString());

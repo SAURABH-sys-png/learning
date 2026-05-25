@@ -1,24 +1,29 @@
-// two types of memory 1. stack 2. heap
+/**
+ * MEMORY — stack vs heap (revision)
+ * HTML: ../html/basics.html
+ *
+ * Stack: primitives, references (the pointer value itself)
+ * Heap:  objects & arrays (actual data lives here)
+ *
+ * Assigning object to another variable copies the REFERENCE, not the object.
+ * Spread { ...obj } creates a shallow copy (new object in heap).
+ */
 
-// stack memory is used for storing primitive data types and function calls
-// heap memory is used for storing objects and arrays
-
-let a = "saurabh"
-
-// in stack memory, a variable is created and assigned a value
+let a = "saurabh"; // primitive → stack
 
 let mtyobj = {
-    name: "saurabh",
-    age: 24,
-    city: "delhi"
-}
+  name: "saurabh",
+  age: 24,
+  city: "delhi",
+};
 
-let usertwo = mtyobj
+let usertwo = mtyobj; // same heap reference
 
-// in styack a copy was given in heap memory, both usertwo and mtyobj are pointing to the same object in heap memory
+usertwo.name = "saurabh gupta";
+console.log("mtyobj.name after usertwo change:", mtyobj.name); // "saurabh gupta"
 
-usertwo.name = "saurabh gupta"
-
-console.log(mtyobj.name) // this will print "saurabh gupta" because both usertwo and mtyobj are pointing to the same object in heap memory
-
-// if we want to create a new object in heap memory, we can use the spread operator
+// Example: shallow copy with spread — new object in heap
+let userCopy = { ...mtyobj };
+userCopy.name = "copy only";
+console.log("original after copy rename:", mtyobj.name); // still "saurabh gupta"
+console.log("copy name:", userCopy.name);

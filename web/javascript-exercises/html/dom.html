@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM selectors — practice</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+      .bg-black { background: #1a1a1a; color: #eee; padding: 1rem; border-radius: 8px; }
+      .heading { font-size: 1.5rem; }
+      nav a { margin-right: 1rem; }
+      #demo { margin-top: 1rem; padding: 0.5rem; border: 1px dashed #666; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">← All exercises</a>
+    </nav>
+    <h1>DOM selectors</h1>
+    <p>Open DevTools console to see output from <code>all_dom_selectors.js</code>.</p>
+
+    <div class="bg-black">
+      <h1 class="heading" id="heading">My DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+        voluptatibus odit quae delectus magni tenetur sed reiciendis dignissimos
+        officiis nesciunt voluptatem, accusamus fuga eaque reprehenderit neque,
+        obcaecati sint eos dolore.
+      </p>
+      <p>Second paragraph for querySelectorAll practice.</p>
+    </div>
+
+    <!-- Hidden text demo for textContent vs innerText (see comments in JS) -->
+    <div id="demo">Hello <span style="display: none">hidden</span> <b>bold</b></div>
+
+    <script src="../dom-selectors/all_dom_selectors.js"></script>
+  </body>
+</html>

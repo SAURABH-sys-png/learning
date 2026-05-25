@@ -1,15 +1,25 @@
-// What are scopes?
-// Scopes are the contexts in which variables and functions are defined and can be accessed.
-//  They determine the visibility and lifetime of variables and functions in a program. In JavaScript, 
-// there are three types of scopes: global scope, function scope, and block scope.
+/**
+ * SCOPE — revision
+ * HTML: ../html/functions-scope.html
+ *
+ * Global — entire program
+ * Function — inside function body (var, function declarations)
+ * Block — let/const inside { } (if, for, etc.)
+ */
 
-// {} defines the scope of some function
-
-
-if(true){
-    let a = 10; // local scope
+if (true) {
+  let a = 10; // block-scoped — only exists inside this block
+  console.log("inside block, a =", a);
 }
-console.log(a); // ReferenceError: a is not defined
 
-// In the above example, the variable 'a' is defined within the block scope of the 'if' statement. 
-// It cannot be accessed outside of that block, resulting in a ReferenceError when we try to log it.
+// Uncomment to see ReferenceError (a is not in outer scope):
+// console.log(a);
+
+// Example: var is function-scoped, not block-scoped (legacy — prefer let/const)
+function demoVar() {
+  if (true) {
+    var b = 20;
+  }
+  console.log("var inside if, readable outside block:", b);
+}
+demoVar();
