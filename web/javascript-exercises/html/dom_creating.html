@@ -1,20 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main-div">
-        <div class="day">Monday</div>
-        <div class="day">Tuesday</div>
-        <div class="day">Wednesday</div>
-        <div class="day">Thursday</div>
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
     </div>
     <script src="../dom-selectors/creating_new_element.js"></script>
-</body>
-<script>
-    const parent = document.querySelector('.')
-</script>
+  </body>
+  <script>
+    // const parent = document.querySelector(".main-div");
+    // console.log(parent.children[1]);
+
+    // console.log(parent.childNodes);
+
+    const le = document.createElement('li');
+    le.innerHTML = 'SAurabh';
+    document.querySelector('.main-div').appendChild(le);
+  </script>
 </html>
