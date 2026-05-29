@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Events Demo</title>
+  <style>
+    /* Center everything on the page for clean viewing */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #0f172a;
+      color: #f8fafc;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    /* The HTMLElement mentioned in the documentation table */
+    .pulsing-box {
+      width: 120px;
+      height: 120px;
+      background-color: #3b82f6;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      
+      /* This triggers the animation:
+        Name: pulseAnimation | Duration: 2s | Loop Count: 2 times 
+      */
+      animation: pulseAnimation 1s ease-in-out 10;
+    }
+
+    /* Defining the changes in animation status */
+    @keyframes pulseAnimation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.5);
+        background-color: black; /* Turns green at peak scale */
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* A simple log box on screen to mirror the console outputs */
+    #status-log {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #1e293b;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+      font-family: monospace;
+      border: 1px solid #334155;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript Animation Events</h2>
+  
+  <div class="pulsing-box">Ready</div>
+
+  <div id="status-log">Waiting for event...</div>
+
+  <script>
+    // 1. Select the elements
+    const box = document.querySelector('.pulsing-box');
+    const log = document.getElementById('status-log');
+
+    // 2. Listen for 'animationstart'
+    box.addEventListener('animationstart', (event) => {
+      console.log(`Event: animationstart. Name: ${event.animationName}`);
+      box.textContent = "Started";
+      log.innerHTML = `🚀 Animation <b>${event.animationName}</b> started!`;
+    });
+
+    // 3. Listen for 'animationiteration' (fires when it loops/repeats)
+    box.addEventListener('animationiteration', (event) => {
+      console.log(`Event: animationiteration. Elapsed time: ${event.elapsedTime}s`);
+      box.textContent = "Looping";
+      log.innerHTML = `🔄 Loop finished at <b>${event.elapsedTime}s</b>`;
+    });
+
+    // 4. Listen for 'animationend'
+    box.addEventListener('animationend', (event) => {
+      console.log(`Event: animationend.`);
+      box.textContent = "Done!";
+      box.style.backgroundColor = '#64748b'; // Fade to neutral grey when completed
+      log.innerHTML = `🏁 Finished! Total time: <b>${event.elapsedTime}s</b>`; 
+    });
+  </script>
+
+</body>
+</html>
