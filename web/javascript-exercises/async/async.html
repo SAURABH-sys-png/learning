@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My</title>
+  </head>
+  <body>
+    <p id="name">My name is saurabh</p>
+    <button id="stop">BUtton</button>
+  </body>
+  <script>
+    setTimeout(function () {
+      console.log("This was printed after 4 seconds");
+    }, 4000);
+
+    setTimeout(function(){
+        document.getElementById('name').innerHTML = "Saurabh the Don"
+    },2000) // this executes first 
+
+
+  </script>
+</html>
