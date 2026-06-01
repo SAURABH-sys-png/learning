@@ -10,5 +10,25 @@
 </body>
 <script> 
     // learning apis 
+    // old way using xml http requests
+
+    const superman = new XMLHttpRequest();
+    superman.open('GET','https://api.github.com/users/SAURABH-sys-png');
+
+    superman.onreadystatechange = function(){
+        console.log(superman.readyState);
+        if (superman.readyState === 4) {
+            // 1. Parse the string data into a JavaScript object
+            const myFollowers = JSON.parse(this.responseText);
+            
+            // 2. Now you can successfully access properties!
+            console.log(myFollowers.login); 
+            console.log(myFollowers.followers);
+            console.log("Kuch to hua");
+        }
+    }
+
+    superman.send();
+    
 </script>
 </html>
