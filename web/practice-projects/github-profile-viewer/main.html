@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Viewer</title>
+    <link rel="stylesheet" href="desighn.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="main-header">
+            <div class="logo">GitStats</div>
+            <div class="search-box">
+                <input type="text" id="username-input" placeholder="Enter GitHub username...">
+                <button id="search-btn">Search</button>
+            </div>
+        </header>
+
+        <main class="profile-card" id="profile-card">
+            
+            <section class="profile-hero">
+                <img src="https://via.placeholder.com/150" alt="Profile Avatar" class="avatar" id="user-avatar">
+                <div class="user-info">
+                    <h1 class="user-name" id="user-name">John Doe</h1>
+                    <p class="user-username" id="user-username">@johndoe</p>
+                    <p class="user-bio" id="user-bio">Full Stack Developer & Competitive Programmer. Building cool things with code.</p>
+                    <div class="user-meta">
+                        <span id="user-location">📍 Location</span>
+                        <a href="#" id="user-blog" target="_blank">🔗 portfolio.dev</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-count" id="repo-count">0</span>
+                    <span class="stat-label">Repositories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-count" id="followers-count">0</span>
+                    <span class="stat-label">Followers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-count" id="following-count">0</span>
+                    <span class="stat-label">Following</span>
+                </div>
+            </section>
+
+            <section class="repos-section">
+                <h2>Popular Repositories</h2>
+                <div class="repos-grid" id="repos-container">
+                    
+                    <article class="repo-card">
+                        <div class="repo-header">
+                            <a href="#" class="repo-link" target="_blank">project-name</a>
+                            <span class="repo-visibility">Public</span>
+                        </div>
+                        <p class="repo-desc">A beautiful, clean description of the repository goes right here.</p>
+                        <div class="repo-footer">
+                            <span class="repo-lang"><span class="lang-color"></span>C++</span>
+                            <span class="repo-stars">⭐ 42</span>
+                        </div>
+                    </article>
+
+                    <article class="repo-card">
+                        <div class="repo-header">
+                            <a href="#" class="repo-link" target="_blank">awesome-portfolio</a>
+                            <span class="repo-visibility">Public</span>
+                        </div>
+                        <p class="repo-desc">My personal portfolio built with the MERN stack and Tailwind.</p>
+                        <div class="repo-footer">
+                            <span class="repo-lang"><span class="lang-color"></span>JavaScript</span>
+                            <span class="repo-stars">⭐ 128</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
