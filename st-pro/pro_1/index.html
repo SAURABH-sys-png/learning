@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Crypto Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="text-3xl">📈</div>
+                    <h1 class="text-2xl font-bold text-cyan-400">CryptoTrack</h1>
+                </div>
+                <div class="hidden md:flex gap-8">
+                    <a href="#" class="hover:text-cyan-400 transition">Home</a>
+                    <a href="#" class="hover:text-cyan-400 transition">Markets</a>
+                    <a href="#" class="hover:text-cyan-400 transition">Portfolio</a>
+                </div>
+                <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition">
+                    Connect Wallet
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Track Crypto Real-Time
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Monitor your favorite cryptocurrencies with live price updates and detailed market analytics
+            </p>
+            <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg text-lg transition transform hover:scale-105">
+                Start Tracking
+            </button>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-cyan-400">2.5T+</div>
+                    <p class="text-gray-300 mt-2">Market Cap</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-cyan-400">1000+</div>
+                    <p class="text-gray-300 mt-2">Cryptocurrencies</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-cyan-400">24/7</div>
+                    <p class="text-gray-300 mt-2">Live Tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cryptocurrencies Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-bold mb-12">Top Cryptocurrencies</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Bitcoin Card -->
+                <div class="crypto-card bg-gray-800 rounded-lg p-6 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold">₿ Bitcoin</h4>
+                            <p class="text-gray-400">BTC</p>
+                        </div>
+                        <div class="text-4xl">🪙</div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-3xl font-bold text-cyan-400">$45,230</p>
+                        <p class="text-green-400 text-lg mt-2">↑ 5.2%</p>
+                    </div>
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Ethereum Card -->
+                <div class="crypto-card bg-gray-800 rounded-lg p-6 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold">Ξ Ethereum</h4>
+                            <p class="text-gray-400">ETH</p>
+                        </div>
+                        <div class="text-4xl">◆</div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-3xl font-bold text-cyan-400">$2,450</p>
+                        <p class="text-green-400 text-lg mt-2">↑ 3.8%</p>
+                    </div>
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Cardano Card -->
+                <div class="crypto-card bg-gray-800 rounded-lg p-6 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold">Cardano</h4>
+                            <p class="text-gray-400">ADA</p>
+                        </div>
+                        <div class="text-4xl">₳</div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-3xl font-bold text-cyan-400">$0.98</p>
+                        <p class="text-red-400 text-lg mt-2">↓ 1.2%</p>
+                    </div>
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Solana Card -->
+                <div class="crypto-card bg-gray-800 rounded-lg p-6 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold">Solana</h4>
+                            <p class="text-gray-400">SOL</p>
+                        </div>
+                        <div class="text-4xl">☀️</div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-3xl font-bold text-cyan-400">$145.60</p>
+                        <p class="text-green-400 text-lg mt-2">↑ 8.5%</p>
+                    </div>
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Ripple Card -->
+                <div class="crypto-card bg-gray-800 rounded-lg p-6 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold">Ripple</h4>
+                            <p class="text-gray-400">XRP</p>
+                        </div>
+                        <div class="text-4xl">💧</div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-3xl font-bold text-cyan-400">$2.15</p>
+                        <p class="text-green-400 text-lg mt-2">↑ 2.1%</p>
+                    </div>
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg transition">
+                        View Details
+                    </button>
+                </div>
+
+                <!-- Dogecoin Card -->
+                <div class="crypto-card bg-gray-800 rounded-lg p-6 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="text-2xl font-bold">Dogecoin</h4>
+                            <p class="text-gray-400">DOGE</p>
+                        </div>
+                        <div class="text-4xl">🐕</div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-3xl font-bold text-cyan-400">$0.42</p>
+                        <p class="text-green-400 text-lg mt-2">↑ 6.3%</p>
+                    </div>
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-600 py-2 rounded-lg transition">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h5 class="font-bold text-lg mb-4 text-cyan-400">CryptoTrack</h5>
+                    <p class="text-gray-400">Your trusted cryptocurrency tracker</p>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Product</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition">Features</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Company</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition">About</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Legal</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition">Privacy</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Terms</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 CryptoTrack. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

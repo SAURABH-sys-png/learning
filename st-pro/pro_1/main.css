@@ -1,0 +1,58 @@
+/* Custom Tailwind CSS styles */
+
+/* Smooth transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Crypto card glassmorphism effect */
+.crypto-card {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 211, 238, 0.1);
+}
+
+.crypto-card:hover {
+    border-color: rgba(34, 211, 238, 0.5);
+    box-shadow: 0 10px 40px rgba(34, 211, 238, 0.2);
+}
+
+/* Animation for price changes */
+@keyframes pulse-green {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.price-update {
+    animation: pulse-green 0.5s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #22d3ee;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
