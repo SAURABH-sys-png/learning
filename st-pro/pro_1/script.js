@@ -43,7 +43,7 @@ function updateUIData() {
     } else {
       reject("Failed to update UI: Data not available");
     }
-  });
+  });// Always sits above any variable or function that it uses, so that it can access them when needed
 
   updateUI
     .then((message) => {
