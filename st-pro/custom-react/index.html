@@ -1,75 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Defence Eligibility Command</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #000; overflow-x: hidden; }
-        /* The Mouse Glow Effect */
-        .glow-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(29, 78, 216, 0.15) 0%, transparent 80%);
-            z-index: 10;
-        }
+      body {
+        background-color: #000;
+        overflow-x: hidden;
+      }
+      /* The Mouse Glow Effect */
+      .glow-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: radial-gradient(
+          circle at var(--x, 50%) var(--y, 50%),
+          rgba(29, 78, 216, 0.15) 0%,
+          transparent 80%
+        );
+        z-index: 10;
+      }
     </style>
-</head>
-<body class="text-gray-200 font-sans">
+  </head>
+  <body class="text-gray-200 font-sans">
     <div class="glow-overlay" id="glow"></div>
 
     <div class="container mx-auto px-4 py-8 relative z-20">
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold tracking-tighter text-white border-b-2 border-blue-900 inline-block pb-2">DEFENCE ELIGIBILITY PORTAL</h1>
-        </header>
+      <header class="text-center mb-12">
+        <h1
+          class="text-4xl font-bold tracking-tighter text-white border-b-2 border-blue-900 inline-block pb-2"
+        >
+          DEFENCE ELIGIBILITY PORTAL
+        </h1>
+      </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            
-            <!-- Left Section: News -->
-            <aside class="lg:col-span-1 space-y-4">
-                <h2 class="text-xl font-bold text-blue-500 uppercase tracking-widest px-2">Defence News</h2>
-                <div class="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800 hover:border-blue-700 transition-colors">
-                    <span class="text-xs text-zinc-500">June 11, 2026</span>
-                    <p class="mt-1 text-sm font-medium">New intake guidelines released for Agniveer Batch 02/2026.</p>
-                </div>
-                <div class="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800 hover:border-blue-700 transition-colors">
-                    <span class="text-xs text-zinc-500">June 10, 2026</span>
-                    <p class="mt-1 text-sm font-medium">IAF updates technical branch medical standards.</p>
-                </div>
-            </aside>
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <!-- Left Section: News -->
+        <aside class="lg:col-span-1 space-y-4">
+          <h2
+            class="text-xl font-bold text-blue-500 uppercase tracking-widest px-2"
+          >
+            Defence News
+          </h2>
+          <div
+            class="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800 hover:border-blue-700 transition-colors"
+          >
+            <span class="text-xs text-zinc-500">June 11, 2026</span>
+            <p class="mt-1 text-sm font-medium">
+              New intake guidelines released for Agniveer Batch 02/2026.
+            </p>
+          </div>
+          <div
+            class="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800 hover:border-blue-700 transition-colors"
+          >
+            <span class="text-xs text-zinc-500">June 10, 2026</span>
+            <p class="mt-1 text-sm font-medium">
+              IAF updates technical branch medical standards.
+            </p>
+          </div>
+        </aside>
 
-            <!-- Center Section: Calculator -->
-            <main class="lg:col-span-2">
-                <div class="bg-zinc-900 p-8 rounded-xl border border-zinc-700 shadow-2xl" id="root">
-                    Main logic appears here. This is where the React app will be rendered. You can replace this with your React component structure and logic to create the Defence Eligibility Calculator.
-                </div>
-            </main>
+        <!-- Center Section: Calculator -->
+        <main class="lg:col-span-2">
+          <div
+            class="bg-zinc-900 p-8 rounded-xl border border-zinc-800 shadow-2xl"
+          >
+            <h2
+              class="text-2xl font-bold text-white mb-6 tracking-tight border-b border-zinc-800 pb-3"
+            >
+              Check Eligibility
+            </h2>
 
-            <!-- Right Section: Ads -->
-            <aside class="lg:col-span-1 space-y-4">
-                <h2 class="text-xl font-bold text-zinc-600 uppercase tracking-widest px-2">Sponsored</h2>
-                <div class="bg-zinc-900/30 aspect-square flex flex-col items-center justify-center border border-dashed border-zinc-800 rounded-lg text-zinc-600">
-                    <p class="text-xs italic">Advertisement Space</p>
-                    <!-- Ad Script goes here -->
+            <form action="#" method="POST" class="space-y-6">
+              <div>
+                <label
+                  for="age"
+                  class="block text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-2"
+                  >Enter Your Age</label
+                >
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  min="15"
+                  max="30"
+                  step="0.5"
+                  required
+                  class="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                  placeholder="e.g. 18"
+                />
+              </div>
+
+              <div>
+                <span
+                  class="block text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3"
+                  >Targeting Entry Type</span
+                >
+                <div class="grid grid-cols-2 gap-4">
+                  <label
+                    class="flex items-center justify-between p-4 bg-zinc-950 border border-zinc-800 rounded-lg cursor-pointer hover:border-zinc-700 transition-colors group"
+                  >
+                    <span
+                      class="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors"
+                      >10+2 Entry</span
+                    >
+                    <input
+                      type="radio"
+                      name="entry_type"
+                      value="10-2"
+                      required
+                      class="w-4 h-4 text-blue-600 bg-zinc-900 border-zinc-700 focus:ring-blue-500"
+                    />
+                  </label>
+                  <label
+                    class="flex items-center justify-between p-4 bg-zinc-950 border border-zinc-800 rounded-lg cursor-pointer hover:border-zinc-700 transition-colors group"
+                  >
+                    <span
+                      class="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors"
+                      >Graduate Entry</span
+                    >
+                    <input
+                      type="radio"
+                      name="entry_type"
+                      value="graduate"
+                      class="w-4 h-4 text-blue-600 bg-zinc-900 border-zinc-700 focus:ring-blue-500"
+                    />
+                  </label>
                 </div>
-                <div class="bg-zinc-900/30 aspect-video flex flex-col items-center justify-center border border-dashed border-zinc-800 rounded-lg text-zinc-600">
-                    <p class="text-xs italic">Advertisement Space</p>
+              </div>
+
+              <div>
+                <label
+                  for="stream"
+                  class="block text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-2"
+                  >Class 12th Subjects</label
+                >
+                <div class="relative">
+                  <select
+                    id="stream"
+                    name="stream"
+                    required
+                    class="w-full bg-zinc-950 border border-zinc-700 rounded-lg px-4 py-3 text-white appearance-none focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                  >
+                    <option value="" disabled selected class="text-zinc-600">
+                      Select your stream
+                    </option>
+                    <option value="pcm">
+                      PCM (Physics, Chemistry, Mathematics)
+                    </option>
+                    <option value="others">
+                      Others (Arts / Commerce / Other Sciences)
+                    </option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-zinc-400"
+                  >
+                    <svg
+                      class="fill-current h-4 w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-            </aside>
-        </div>
+              </div>
+
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  class="w-full bg-blue-700 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg tracking-wide transition-colors duration-200 shadow-lg shadow-blue-900/20 active:bg-blue-800"
+                  id="submit-btn"
+                >
+                  Check Command Eligibility
+                </button>
+              </div>
+            </form>
+          </div>
+        </main>
+
+        <!-- Right Section: Ads -->
+        <aside class="lg:col-span-1 space-y-4">
+          <h2
+            class="text-xl font-bold text-zinc-600 uppercase tracking-widest px-2"
+          >
+            Sponsored
+          </h2>
+          <div
+            class="bg-zinc-900/30 aspect-square flex flex-col items-center justify-center border border-dashed border-zinc-800 rounded-lg text-zinc-600"
+          >
+            <p class="text-xs italic">Advertisement Space</p>
+            <!-- Ad Script goes here -->
+          </div>
+          <div
+            class="bg-zinc-900/30 aspect-video flex flex-col items-center justify-center border border-dashed border-zinc-800 rounded-lg text-zinc-600"
+          >
+            <p class="text-xs italic">Advertisement Space</p>
+          </div>
+        </aside>
+      </div>
     </div>
 
     <script>
-        const glow = document.getElementById('glow');
-        window.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth) * 100;
-            const y = (e.clientY / window.innerHeight) * 100;
-            glow.style.setProperty('--x', `${x}%`);
-            glow.style.setProperty('--y', `${y}%`);
-        });
+      const glow = document.getElementById("glow");
+      window.addEventListener("mousemove", (e) => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        glow.style.setProperty("--x", `${x}%`);
+        glow.style.setProperty("--y", `${y}%`);
+      });
     </script>
-</body>
+    <script type="module" src="../custom-react/main.js"></script>
+  </body>
 </html>
