@@ -17,7 +17,7 @@ findE.addEventListener('click', (e) => {
     }
 
     myObj.age = parseFloat(getAge.value);
-    myObj.aimingFor = getEntryType.value; 
+    myObj.aimingFor = getEntryType.value;
 
     if (getStream.value === 'pcm') {
         myObj.subjects = ['Math', 'Physics', 'Chemistry'];
