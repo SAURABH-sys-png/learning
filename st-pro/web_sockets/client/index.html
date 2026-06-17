@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        #messages { border: 1px solid #ccc; height: 200px; overflow-y: scroll; padding: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Chat with Node.js Server</h2>
+    <div id="messages"></div>
+    
+    <input type="text" id="messageInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        // 1. Connect to the WebSocket server (Note the 'ws://' protocol instead of 'http://')
+        const socket = new WebSocket('ws://localhost:8080');
+        const messagesDiv = document.getElementById('messages');
+
+        // 2. Listen for connection open
+        socket.onopen = () => {
+            logMessage("System: Connected to the server!");
+        };
+
+        // 3. Listen for messages from the server
+        socket.onmessage = (event) => {
+            logMessage(`Server says: ${event.data}`);
+        };
+
+        // 4. Handle errors or disconnection
+        socket.onclose = () => {
+            logMessage("System: Disconnected from server.");
+        };
+
+        // 5. Function to send a message to the server
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value;
+            
+            if (message.trim() !== "") {
+                socket.send(message); // Sends the data to the server
+                logMessage(`You: ${message}`);
+                input.value = ''; // Clear input
+            }
+        }
+
+        // Helper function to show text on screen
+        function logMessage(text) {
+            const msgEl = document.createElement('p');
+            msgEl.textContent = text;
+            messagesDiv.appendChild(msgEl);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight; // Auto-scroll
+        }
+    </script>
+</body>
+</html>
