@@ -1,9 +1,4 @@
-import { response } from "express";
-import { rejects } from "node:assert";
-import { error } from "node:console";
-import { resolve } from "node:dns";
 
-// 1. Create your state updater function
 function updateGameState(serverData) {
     console.log("Updating board with server data:", serverData);
 
@@ -24,6 +19,7 @@ async function formAndSend(buttonId){
         const value = btn.innerText;
         myObj[key] = value;
     }
+    myObj[buttonId] = 'O';
     
     try {
         const serverInt = await new Promise((resolve, reject) => {
