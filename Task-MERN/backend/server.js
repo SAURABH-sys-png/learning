@@ -16,4 +16,5 @@ app.use('/api' , require('./routes/taskRoutes'));
 // 2. Actually start the server using app.listen()
 app.listen(port, () => {
     console.log(`Server running at port ${port}`);
+    console.log(`Ser ver is running on this http://localhost:8000/api`);
 });
