@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 app.use('/api' , require('./routes/taskRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 
 // 2. Actually start the server using app.listen()
 app.listen(port, () => {
