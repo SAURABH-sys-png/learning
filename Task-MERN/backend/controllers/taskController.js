@@ -12,7 +12,17 @@ const getTask = asyncHandler(async (req, res) => {
 // @desc    Update a task
 // @route   PUT /api/tasks/:id
 const putTask = asyncHandler(async (req, res) => {
-  
+  const task = await Task.findById(req.params.id)
+  if (!task) {
+    res.status(400);
+    throw new Error('Task not found');
+
+  }
+
+  const updatedTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new : true})
+
+  res.status(200).json(updatedTask)
+
 });
 
 // @desc    Create a task
@@ -30,9 +40,17 @@ const postTask = asyncHandler(async (req, res) => {
 // @desc    Delete a task
 // @route   DELETE /api/tasks/:id
 const delTask = asyncHandler(async (req, res) => {
-  res.status(200).json({
-    message: `Task deleted with id: ${req.params.id}`,
-  });
+  const task = Task.findById(req.params.id)
+
+  if (!task) {
+    res.status(400)
+    throw new Error('Task not found')
+  }
+
+  await Task.findByIdAndDelete(req.params.id)
+
+  res.status(200).json({id : req.params.id})
+  
 });
 
 module.exports = {
